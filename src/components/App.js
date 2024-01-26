@@ -115,13 +115,28 @@ const App = () => {
         <a href="/" id="filter-btn-1" onClick={All}>
           All
         </a>
-        <a href="/" id="filter-btn-2" onClick={breakFast}>
+        <a
+          href="/"
+          id="filter-btn-2"
+          data-test-id="menu-item-breakfast"
+          onClick={breakFast}
+        >
           Breakfast
         </a>
-        <a href="/" id="filter-btn-3" onClick={Lunch}>
+        <a
+          href="/"
+          id="filter-btn-3"
+          data-test-id="menu-item-lunch"
+          onClick={Lunch}
+        >
           Lunch
         </a>
-        <a href="/" id="filter-btn-4" onClick={Shake}>
+        <a
+          href="/"
+          id="filter-btn-4"
+          data-test-id="menu-item-shakes"
+          onClick={Shake}
+        >
           Shakes
         </a>
       </nav>
