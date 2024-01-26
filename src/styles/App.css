@@ -21,9 +21,12 @@ nav {
     justify-content: center;
 }
 
-a {
+button {
+    border: none;
+    background: none;
     color: orange;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .content {

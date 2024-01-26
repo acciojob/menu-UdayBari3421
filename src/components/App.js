@@ -112,33 +112,30 @@ const App = () => {
     <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav>
-        <a href="/" id="filter-btn-1" onClick={All}>
+        <button id="filter-btn-1" data-test-id="menu-item-all" onClick={All}>
           All
-        </a>
-        <a
-          href="/"
+        </button>
+        <button
           id="filter-btn-2"
           data-test-id="menu-item-breakfast"
           onClick={breakFast}
         >
           Breakfast
-        </a>
-        <a
-          href="/"
+        </button>
+        <button
           id="filter-btn-3"
           data-test-id="menu-item-lunch"
           onClick={Lunch}
         >
           Lunch
-        </a>
-        <a
-          href="/"
+        </button>
+        <button
           id="filter-btn-4"
           data-test-id="menu-item-shakes"
           onClick={Shake}
         >
           Shakes
-        </a>
+        </button>
       </nav>
       <div className="content">
         {data.length > 0 &&
