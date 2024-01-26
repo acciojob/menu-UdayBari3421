@@ -109,19 +109,19 @@ const App = () => {
     setData(arr);
   }
   return (
-    <div className="main">
+    <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav>
-        <a href="/" onClick={All}>
+        <a href="/" id="filter-btn-1" onClick={All}>
           All
         </a>
-        <a href="/" onClick={breakFast}>
+        <a href="/" id="filter-btn-2" onClick={breakFast}>
           Breakfast
         </a>
-        <a href="/" onClick={Lunch}>
+        <a href="/" id="filter-btn-3" onClick={Lunch}>
           Lunch
         </a>
-        <a href="/" onClick={Shake}>
+        <a href="/" id="filter-btn-4" onClick={Shake}>
           Shakes
         </a>
       </nav>
@@ -133,8 +133,8 @@ const App = () => {
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
-                    <h6>{item.title}</h6>
-                    <h6 className="price">{item.price}</h6>
+                    <h3>{item.title}</h3>
+                    <h3 className="price">$ {item.price}</h3>
                   </span>
                   <hr />
                   <span>
