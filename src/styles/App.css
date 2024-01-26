@@ -1,12 +1,66 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
+* {
+    padding: 0;
+    margin: 0;
+}
 
-button{
-    color: #27aedb;
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+}
+
+h1 {
     text-align: center;
-    justify-content: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
     align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+.content {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    gap: 45px 100px;
+}
+
+.card {
+    display: flex;
+    width: 500px;
+    gap: 20px;
+    height: 20vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left span {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 30%;
+    border: 3.2px solid orange;
+    border-radius: 5px;
+}
+
+.price {
+    color: orange;
 }
