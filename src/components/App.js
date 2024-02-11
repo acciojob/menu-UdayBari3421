@@ -5,7 +5,7 @@ const arr = [
     title: "buttermilk pancakes",
     category: "breakfast",
     price: 15.99,
-    img: "./images/item-1.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
   },
   {
@@ -13,7 +13,7 @@ const arr = [
     title: "diner double",
     category: "lunch",
     price: 13.99,
-    img: "./images/item-2.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
   },
   {
@@ -21,7 +21,7 @@ const arr = [
     title: "godzilla milkshake",
     category: "shakes",
     price: 6.99,
-    img: "./images/item-3.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
   },
   {
@@ -29,7 +29,7 @@ const arr = [
     title: "country delight",
     category: "breakfast",
     price: 20.99,
-    img: "./images/item-4.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
@@ -37,7 +37,7 @@ const arr = [
     title: "egg attack",
     category: "lunch",
     price: 22.99,
-    img: "./images/item-5.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
   },
   {
@@ -45,7 +45,7 @@ const arr = [
     title: "oreo dream",
     category: "shakes",
     price: 18.99,
-    img: "./images/item-6.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
   },
   {
@@ -53,7 +53,7 @@ const arr = [
     title: "bacon overflow",
     category: "breakfast",
     price: 8.99,
-    img: "./images/item-7.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
   },
   {
@@ -61,7 +61,7 @@ const arr = [
     title: "american classic",
     category: "lunch",
     price: 12.99,
-    img: "./images/item-8.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
   },
   {
@@ -69,7 +69,7 @@ const arr = [
     title: "quarantine buddy",
     category: "shakes",
     price: 16.99,
-    img: "./images/item-9.jpeg",
+    img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
@@ -77,65 +77,78 @@ const arr = [
 const App = () => {
   const [data, setData] = useState(arr);
 
+  const [visible1, setVisible1] = useState(true);
+  const [visible2, setVisible2] = useState(true);
+  const [visible3, setVisible3] = useState(true);
+
   function breakFast(e) {
-    e.preventDefault();
     setData(
       arr.filter((category) => {
         return category.category === "breakfast";
       })
     );
+    setVisible1(false);
   }
 
   function Lunch(e) {
-    e.preventDefault();
     setData(
       arr.filter((category) => {
         return category.category === "lunch";
       })
     );
+    setVisible2(false);
   }
 
   function Shake(e) {
-    e.preventDefault();
     setData(
       arr.filter((category) => {
         return category.category === "shakes";
       })
     );
+    setVisible3(false);
   }
 
-  function All(e) {
-    e.preventDefault();
+  function All() {
     setData(arr);
+    setVisible1(true);
+    setVisible2(true);
+    setVisible3(true);
   }
+
   return (
     <div className="main" id="main">
       <h1>Our Menu</h1>
-      <nav>
+      <nav id="nav">
         <button id="filter-btn-1" data-test-id="menu-item-all" onClick={All}>
           All
         </button>
-        <button
-          id="filter-btn-2"
-          data-test-id="menu-item-breakfast"
-          onClick={breakFast}
-        >
-          Breakfast
-        </button>
-        <button
-          id="filter-btn-3"
-          data-test-id="menu-item-lunch"
-          onClick={Lunch}
-        >
-          Lunch
-        </button>
-        <button
-          id="filter-btn-4"
-          data-test-id="menu-item-shakes"
-          onClick={Shake}
-        >
-          Shakes
-        </button>
+        {visible1 && (
+          <button
+            id="filter-btn-2"
+            data-test-id="menu-item-breakfast"
+            onClick={breakFast}
+          >
+            Breakfast
+          </button>
+        )}
+        {visible2 && (
+          <button
+            id="filter-btn-3"
+            data-test-id="menu-item-lunch"
+            onClick={Lunch}
+          >
+            Lunch
+          </button>
+        )}
+        {visible3 && (
+          <button
+            id="filter-btn-4"
+            data-test-id="menu-item-shakes"
+            onClick={Shake}
+          >
+            Shakes
+          </button>
+        )}
       </nav>
       <div className="content">
         {data.length > 0 &&
