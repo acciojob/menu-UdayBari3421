@@ -100,32 +100,16 @@ const App = () => {
     <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav id="nav">
-        <p
-          id="filter-btn-1"
-          data-test-id="menu-item-all"
-          onClick={handleCategories}
-        >
+        <p id="filter-btn-1" onClick={handleCategories}>
           All
         </p>
-        <p
-          id="filter-btn-2"
-          data-test-id="menu-item-breakfast"
-          onClick={handleCategories}
-        >
+        <p id="filter-btn-2" onClick={handleCategories}>
           Breakfast
         </p>
-        <p
-          id="filter-btn-3"
-          data-test-id="menu-item-lunch"
-          onClick={handleCategories}
-        >
+        <p id="filter-btn-3" onClick={handleCategories}>
           Lunch
         </p>
-        <p
-          id="filter-btn-4"
-          data-test-id="menu-item-shakes"
-          onClick={handleCategories}
-        >
+        <p id="filter-btn-4" onClick={handleCategories}>
           Shakes
         </p>
       </nav>
@@ -133,7 +117,7 @@ const App = () => {
         {data.length > 0 &&
           data.map((item) =>
             item.category == "shakes" ? (
-              <div className="card">
+              <div className="card" data-test-id="menu-item-shakes">
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
@@ -147,7 +131,7 @@ const App = () => {
                 </div>
               </div>
             ) : item.category == "breakfast" ? (
-              <div className="card">
+              <div data-test-id="menu-item-breakfast" className="card">
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
@@ -161,7 +145,7 @@ const App = () => {
                 </div>
               </div>
             ) : item.category == "lunch" ? (
-              <div key={item.title} className="card">
+              <div data-test-id="menu-item-lunch" className="card">
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
