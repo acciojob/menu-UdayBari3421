@@ -100,16 +100,14 @@ const App = () => {
     <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav id="nav">
+        <p onClick={handleCategories}>All</p>
         <p id="filter-btn-1" onClick={handleCategories}>
-          All
-        </p>
-        <p id="filter-btn-2" onClick={handleCategories}>
           Breakfast
         </p>
-        <p id="filter-btn-3" onClick={handleCategories}>
+        <p id="filter-btn-2" onClick={handleCategories}>
           Lunch
         </p>
-        <p id="filter-btn-4" onClick={handleCategories}>
+        <p id="filter-btn-3" onClick={handleCategories}>
           Shakes
         </p>
       </nav>
