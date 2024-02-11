@@ -100,34 +100,34 @@ const App = () => {
     <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav id="nav">
-        <button
+        <p
           id="filter-btn-1"
           data-test-id="menu-item-all"
           onClick={handleCategories}
         >
           All
-        </button>
-        <button
+        </p>
+        <p
           id="filter-btn-2"
           data-test-id="menu-item-breakfast"
           onClick={handleCategories}
         >
           Breakfast
-        </button>
-        <button
+        </p>
+        <p
           id="filter-btn-3"
           data-test-id="menu-item-lunch"
           onClick={handleCategories}
         >
           Lunch
-        </button>
-        <button
+        </p>
+        <p
           id="filter-btn-4"
           data-test-id="menu-item-shakes"
           onClick={handleCategories}
         >
           Shakes
-        </button>
+        </p>
       </nav>
       <div className="content">
         {data.length > 0 &&
