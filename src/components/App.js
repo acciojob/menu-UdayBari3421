@@ -77,9 +77,9 @@ const arr = [
 const App = () => {
   const [data, setData] = useState(arr);
 
-  const [visible1, setVisible1] = useState(true);
-  const [visible2, setVisible2] = useState(true);
-  const [visible3, setVisible3] = useState(true);
+  const [visible1, setVisible1] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
 
   function breakFast(e) {
     setData(
