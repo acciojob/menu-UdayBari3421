@@ -62,7 +62,7 @@ const arr = [
     category: "lunch",
     price: 12.99,
     img: "https://plus.unsplash.com/premium_photo-1672846027109-e2c91500afef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
+    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. item truck truffaut  `,
   },
   {
     id: 9,
@@ -77,84 +77,63 @@ const arr = [
 const App = () => {
   const [data, setData] = useState(arr);
 
-  const [visible1, setVisible1] = useState(true);
-  const [visible2, setVisible2] = useState(true);
-  const [visible3, setVisible3] = useState(true);
-
-  function breakFast(e) {
-    setData(
-      arr.filter((category) => {
-        return category.category === "breakfast";
-      })
-    );
-    setVisible1(false);
-  }
-
-  function Lunch(e) {
-    setData(
-      arr.filter((category) => {
-        return category.category === "lunch";
-      })
-    );
-    setVisible2(false);
-  }
-
-  function Shake(e) {
-    setData(
-      arr.filter((category) => {
-        return category.category === "shakes";
-      })
-    );
-    setVisible3(false);
-  }
-
-  function All() {
-    setData(arr);
-    setVisible1(true);
-    setVisible2(true);
-    setVisible3(true);
+  function handleCategories(e) {
+    if (e.target.innerText === "All") {
+      setData(arr);
+      return;
+    }
+    if (e.target.innerText === "Breakfast") {
+      setData(arr.filter((item) => item.category === "breakfast"));
+      return;
+    }
+    if (e.target.innerText === "Lunch") {
+      setData(arr.filter((item) => item.category === "lunch"));
+      return;
+    }
+    if (e.target.innerText === "Shakes") {
+      setData(arr.filter((item) => item.category === "shakes"));
+      return;
+    }
   }
 
   return (
     <div className="main" id="main">
       <h1>Our Menu</h1>
       <nav id="nav">
-        <button id="filter-btn-1" data-test-id="menu-item-all" onClick={All}>
+        <button
+          id="filter-btn-1"
+          data-test-id="menu-item-all"
+          onClick={handleCategories}
+        >
           All
         </button>
-        {visible1 && (
-          <button
-            id="filter-btn-2"
-            data-test-id="menu-item-breakfast"
-            onClick={breakFast}
-          >
-            Breakfast
-          </button>
-        )}
-        {visible2 && (
-          <button
-            id="filter-btn-3"
-            data-test-id="menu-item-lunch"
-            onClick={Lunch}
-          >
-            Lunch
-          </button>
-        )}
-        {visible3 && (
-          <button
-            id="filter-btn-4"
-            data-test-id="menu-item-shakes"
-            onClick={Shake}
-          >
-            Shakes
-          </button>
-        )}
+        <button
+          id="filter-btn-2"
+          data-test-id="menu-item-breakfast"
+          onClick={handleCategories}
+        >
+          Breakfast
+        </button>
+        <button
+          id="filter-btn-3"
+          data-test-id="menu-item-lunch"
+          onClick={handleCategories}
+        >
+          Lunch
+        </button>
+        <button
+          id="filter-btn-4"
+          data-test-id="menu-item-shakes"
+          onClick={handleCategories}
+        >
+          Shakes
+        </button>
       </nav>
       <div className="content">
         {data.length > 0 &&
-          data.map((item, index) => {
-            return (
-              <div key={item.title + index} className="card">
+          data.map((item) =>
+            item.category == "shakes" ? (
+              <div className="card">
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
@@ -167,8 +146,50 @@ const App = () => {
                   </span>
                 </div>
               </div>
-            );
-          })}
+            ) : item.category == "breakfast" ? (
+              <div className="card">
+                <img src={item.img} alt="No" />
+                <div className="left">
+                  <span>
+                    <h3>{item.title}</h3>
+                    <h3 className="price">$ {item.price}</h3>
+                  </span>
+                  <hr />
+                  <span>
+                    <p>{item.desc}</p>
+                  </span>
+                </div>
+              </div>
+            ) : item.category == "lunch" ? (
+              <div key={item.title} className="card">
+                <img src={item.img} alt="No" />
+                <div className="left">
+                  <span>
+                    <h3>{item.title}</h3>
+                    <h3 className="price">$ {item.price}</h3>
+                  </span>
+                  <hr />
+                  <span>
+                    <p>{item.desc}</p>
+                  </span>
+                </div>
+              </div>
+            ) : (
+              <div key={item.title} className="card">
+                <img src={item.img} alt="No" />
+                <div className="left">
+                  <span>
+                    <h3>{item.title}</h3>
+                    <h3 className="price">$ {item.price}</h3>
+                  </span>
+                  <hr />
+                  <span>
+                    <p>{item.desc}</p>
+                  </span>
+                </div>
+              </div>
+            )
+          )}
       </div>
     </div>
   );
