@@ -115,9 +115,9 @@ const App = () => {
       </nav>
       <div className="content">
         {data.length > 0 &&
-          data.map((item) =>
-            item.category == "shakes" ? (
-              <div className="card" data-test-id="menu-item-shakes">
+          data.map((item) => {
+            return item.category == "shakes" ? (
+              <div data-test-id="menu-item-shakes" className="card">
                 <img src={item.img} alt="No" />
                 <div className="left">
                   <span>
@@ -172,8 +172,8 @@ const App = () => {
                   </span>
                 </div>
               </div>
-            )
-          )}
+            );
+          })}
       </div>
     </div>
   );
